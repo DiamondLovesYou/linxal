@@ -44,7 +44,7 @@ pub fn conj_t<T: LinxalImplScalar, D: Data<Elem = T>>(a: &ArrayBase<D, Ix2>) -> 
 /// the other elements.
 pub fn make_triangular_into<T, D>(mut a: ArrayBase<D, Ix2>, uplo: Symmetric) -> ArrayBase<D, Ix2>
     where T: LinxalImplScalar,
-          D: DataMut<Elem = T> + DataOwned<Elem = T>
+          D: DataMut<Elem = T>
 {
     let order = match uplo {
         Symmetric::Upper => Ordering::Greater,
